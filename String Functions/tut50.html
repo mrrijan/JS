@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | String Functions</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis doloremque voluptatem fuga! Ad id vitae velit aut, veniam corporis aperiam nobis officia quaerat dolorem exercitationem totam tenetur aliquam sit aliquid repudiandae voluptates nisi ipsam veritatis rem saepe labore ducimus vel! Magni, reprehenderit quidem nihil amet eveniet possimus sapiente dolor?</p>
+    </div>   
+<script>
+    var str="This is a string";
+    //index of gives first occurence of a substring
+    var pos=str.indexOf('is');
+    console.log(pos);
+
+    //last occurence of a substring
+    pos=str.lastIndexOf('is');
+    console.log(pos);
+
+    //substring from a string
+    var sub=str.slice(0,6);
+    console.log(sub);
+    sub=str.substring(0,6);//same thing as slicing but it does not take negative values
+    console.log(sub);
+    sub=str.substr(0,6);//The first argument is for starting of the string and second is for length of string
+    console.log(sub);
+
+    //Replaces the string with Rijan
+    var replace=str.replace('string','Rijan');
+    console.log(replace);
+
+    //Uppercase and lowercase
+    console.log(str.toUpperCase());
+    console.log(str.toLowerCase());
+
+    //concatination
+    var str1=str.concat('Rijan');
+    console.log(str1);
+    console.log(str+'Rijan');//second method of concatination
+
+    //Trim 
+    var whitespaces="     Rijan     is      eating       ";
+    console.log(whitespaces);
+    console.log(whitespaces.trim());//trims out white spaces from start and end not from middle
+
+
+    //character 
+    var char =str.charAt(2);
+    console.log(char);
+    char = str.charCodeAt(2);
+    console.log(char);//not that important
+
+    console.log(str[2]);
+ 
+</script>
+
+
+</body>
+</html>
