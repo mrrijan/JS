@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javscript | Scope,if-else and condition</title>
+</head>
+<body>
+    
+
+    <script>
+        //Use of Let
+        let a ="Rijan lama";
+        {
+            let a="Rijan";
+            console.log(a);
+        }
+        console.log(a);
+       //Use of Constants
+       const b="Rijan Lama is eating";
+       console.log(b);
+    //b="Rijan lama is sleeping"
+    //console.log(b); wont work because constants cant be changed
+      
+    //conditional if else statements
+    let age =2;
+    if(age>20)
+    {
+        console.log("You can drink beer");
+    }
+    else if(age==2){
+        console.log("Your age is very small");
+    }
+    else{
+        console.log("You cannot drink beer");
+    }
+    
+    //switch case statements
+    const cups =40;
+    switch(cups)
+    {
+        case 4:
+            console.log("The number of cup is 4");
+            break;
+        case 10:
+            console.log("The number of cup is 10");
+            break;
+        case 15:
+            console.log("The number of cup is 15");
+            break;
+        case 20:
+            console.log("The number of cup is 20");
+            break;
+
+        default:
+            console.log("The number is none of 4,10,15,20");
+            break;
+    }
+  const name="Rijan";
+  switch (name) {
+    case 'Rijan':
+        console.log("Welcome master");
+        break;
+  
+    default:
+        console.log("Permission denied");
+        break;
+  }
+    </script>
+</body>
+</html>
