@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | Arrays and Objects</title>
+</head>
+<body>
+    \
+
+
+    <script>
+        //Objects
+         let employee ={
+            name: "Rijan",
+            roll : 25,
+            salary: 100000,
+            "channel 1" : "Code with Rijan",
+         }
+         console.log(employee);
+         console.log(employee.name);//one way to obtain value from object
+         console.log(employee['roll']);//another method to obtain value from object 
+         console.log(employee['channel 1']);//only secong method can be used for keys with spaces
+         //Arrays
+         let names = [1,5,"Rijan",undefined,true];
+         console.log(names[4]);
+
+        //  Another method to make array
+
+         let numbers=new Array("Rijan","Lama",5,7,true);
+         console.log(numbers.length);
+         numbers = numbers.sort();
+         console.log(numbers);
+        numbers.push("Rijan is eating");
+         console.log(numbers);
+
+
+         let foods=new Array(23);//method to make new array consisting of 23 empty spaces
+         console.log(foods);
+    </script>
+</body>
+</html>
