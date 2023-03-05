@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigating the DOM</title>
+</head>
+<body>
+    <div class="container" id="main">
+        <ul id="nav">
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contact us</li>
+            <li>Services</li>
+        </ul>
+    </div>
+    <div class="container">
+        This is second container
+    </div>
+    <script>
+        //We can access the html inside it through main.innerHTML
+        let main=document.getElementById('main');
+        console.log(main);
+
+        let nav=document.getElementById('nav');
+        console.log(nav);
+        //In case of multiple classes we can access it like arrays for ex: containers[0].innerHTML , etc 
+        let containers = document.getElementsByClassName('container');
+        console.log(containers);
+
+        //we can also use css query selector to manipulate dom
+        let sel=document.querySelector('#nav>li');//This only gives the first li
+        console.log(sel);
+
+        let sels=document.querySelectorAll('#nav>li');//this gives all the li under nav
+        console.log(sels);//we can manipulate the first  li through sels[0]="inserted" 
+    </script>
+</body>
+</html>
