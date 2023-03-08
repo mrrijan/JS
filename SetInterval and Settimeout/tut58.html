@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS | SetInterval and SetTimeout</title>
+</head>
+<body>
+    <div class="container">
+        Time now is <span id="time"> </span>
+    </div>
+
+    <script>
+         
+        //  SetTimeout --> Allows us to run the function once after a interval of time
+        //  cleatTimeout --> Simply clears the timeout . It takes the timeout's unique id as its argument
+        // setInterval --> Allows us to run the function repeatedly after a interval of time
+        function greet(name,bye)
+        {
+            console.log("Hello good morning" + " "+ name + " " + bye);
+        }
+        let name1="Rijan";
+        // setTimeout(greet,5000);
+        //setTimeout(greet,5000,"Rijan");Here I passed the Name as the third parameter 
+        //We can also pass multiple parameters such as : 
+        // setTimeout(greet,5000,"Rijan","Take care");
+
+        // let timeOut =  setTimeout(greet,5000,"Rijan","Take care");
+        // console.log(timeOut);
+        //clearTimeout(timeOut);This is used to clear the timeout now the timeout wont run
+        // setTimeout(greet(),5000); Wrong as it is calling the function inside the Settimeout
+        let inervalID=setInterval(greet,2000,"Rijan","Take care");
+        clearInterval(inervalID); 
+
+        function display()
+        {
+            let time=new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML=time;
+        }
+        setInterval(display,1000);
+    </script>
+</body>
+</html>
