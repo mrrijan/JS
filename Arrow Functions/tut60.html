@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS | Arrow functions </title>
+</head>
+<body>
+   <div class="container">
+    This is arrow functions tutorial .
+   </div>
+    <script>
+        //Normal function
+    //    function greet()
+    //    {
+    //     console.log("Good morning");
+    //    }
+
+    //Arrow function
+    // let  greet = ()=>
+    // {
+    //     console.log("Good morning");
+    // }
+    let  greet = ()=>console.log("Good morning");
+    
+       greet();
+
+       //It can be used in settimeouts directly instead of using function name for ex : 
+       setTimeout(() => {
+        console.log("We are inside settimeout");
+       }, 3000);
+
+       //An example of arrow function
+       
+    //    let sum = (a,b)=>{
+    //            return a+b;
+    //    }
+      
+    //We can also write the above functions as :
+
+    let sum=(a,b)=>a+b;
+     
+    let obj = {
+        names : ["Rijan","sabin","sameer","Nikesh"],
+        speak(){
+            this.names.forEach((students)=>{
+                console.log("Kukdoo koo  "+students);
+            }    )
+        }
+    }
+    obj.speak();
+
+    let obj1 = {
+        greeting : "Namaste",
+        name : ["Rijan","Sabin","Sameer","Nikesh"],
+        talk(){
+            this.name.forEach( (student)=>{
+                console.log( this.greeting + " " + student);      //this wont throw any error
+            }  )
+        }
+    }
+    obj1.talk();
+
+    //But if we used function instead of arrow function it would have thrown an error for ex : 
+    // let obj1 = {
+    //     greeting : "Namaste",
+    //     name : ["Rijan","Sabin","Sameer","Nikesh"],
+    //     talk(){
+    //         this.name.forEach(function s  (student){
+    //             console.log( this.greeting + " " + student); //this will throw any error "undefined" in place of this.greeting this is due
+    //             //to the fact that its searching for that this inside the function
+    //         }  )
+    //     }
+    // }
+    // obj1.talk();
+    </script>
+</body>
+</html>
