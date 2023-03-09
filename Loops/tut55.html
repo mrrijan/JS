@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS | Loop</title>
+</head>
+<body>
+    <div class="container">
+        This is loop tutorial . 
+    </div>
+    <script>
+        let i=0;
+        for( i=0;i<3;i++)
+        {
+            console.log(i);
+        }
+        let friends = ["Rijan" , "Sabin" , "Sameer" , "Nikesh" ];
+        let length=friends.length;
+        // for(let i=0;i<length;i++) or I can also directly use friends.length inside the condition
+        // {
+        //     console.log("Goodmorning " + friends[i]);
+        // }
+
+        //In modern javascript we directly use for each
+        // friends.forEach(function f(elements)
+        // {
+        //     console.log("Goodmorning "+ elements);
+        // }
+
+        // );
+
+        //Below is an example of arrow function
+        // friends.forEach( f = (elements)=>
+        // {
+        //     console.log("Goodmorning "+ elements);
+        // }
+
+        // );
+
+        //We can also use for of loop such as :
+
+        for(element of friends)
+        {
+            console.log("Good morning " + element);
+        }
+
+        //WE can iterate objects as 
+
+        let employee={
+            name : "Rijan",
+            Salary : 500000,
+            profession : "Web developer",
+        }
+        for(key in employee)
+        {
+            console.log(`The ${key} of employee is ${employee[key]}`);
+        }
+
+        //While loop in JS
+
+        let a=0;
+        while(a<4)
+        {
+            console.log(`${a} is less than 4`);
+            a++;
+        }
+        
+
+        //do while loop in JS 
+        //The difference between while and do while is that do while loop always runs atleast one time
+        let b =34;
+        do{
+            console.log(`${b} is  less than 4 will run because we are inside do while  `);
+            b++;
+        }while(b<4);
+    </script>
+</body>
+</html>
